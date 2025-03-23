@@ -2,10 +2,9 @@ package com.reetzzz.schedule.model;
 
 
 import java.time.LocalTime;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;  // Use a anotação @Id do jakarta.persistence
+import java.util.List;
+
+import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,13 +16,16 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Entity
+// agenda
 public class Schedule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
-    private String weekday;
+    @ElementCollection(fetch = FetchType.EAGER)
+    @Enumerated(EnumType.STRING)
+    private List<Weekday> weekdays;
 
     private LocalTime time;
 
@@ -43,12 +45,12 @@ public class Schedule {
         this.name = name;
     }
 
-    public String getWeekday() {
-        return weekday;
+    public List<Weekday> getWeekdays() {
+        return weekdays;
     }
 
-    public void setWeekday(String weekday) {
-        this.weekday = weekday;
+    public void setWeekdays(List<Weekday> weekdays) {
+        this.weekdays = weekdays;
     }
 
     public LocalTime getTime() {

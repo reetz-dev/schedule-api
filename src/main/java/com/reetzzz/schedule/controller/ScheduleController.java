@@ -41,7 +41,7 @@ public class ScheduleController {
         if (schedule.isPresent()) {
             Schedule updatedSchedule = schedule.get();
             updatedSchedule.setName(newSchedule.getName());
-            updatedSchedule.setWeekday(newSchedule.getWeekday());
+            updatedSchedule.setWeekdays(newSchedule.getWeekdays());
             updatedSchedule.setTime(newSchedule.getTime());
             return ResponseEntity.ok(service.saveSchedule(updatedSchedule));
         }
