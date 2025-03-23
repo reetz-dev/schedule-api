@@ -15,7 +15,7 @@ public class ScheduleService {
     @Autowired
     private ScheduleRepository repository;
     private final RestTemplate restTemplate = new RestTemplate();
-    private final String GRADE_API_URL = "http://localhost:3000/grades";
+    private final String GRADE_API_URL = "http://localhost:3002/api/grades";
     public List<Schedule> getAllSchedules() {
         return repository.findAll();
     }
