@@ -1,6 +1,7 @@
 package com.reetzzz.schedule.service;
 import com.reetzzz.schedule.DTO.GradeDTO;
 import com.reetzzz.schedule.model.Schedule;
+import com.reetzzz.schedule.model.Weekday;
 import com.reetzzz.schedule.repository.ScheduleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,8 +28,8 @@ public class ScheduleService {
         return repository.findById(id);
     }
 
-    public List<Schedule> getSchedulesByWeekday(String weekday) {
-        return repository.findByWeekday(weekday);
+    public List<Schedule> getSchedulesByWeekday(Weekday weekdays) {
+        return repository.findByWeekdays(weekdays);
     }
 
     public Schedule saveSchedule(Schedule schedule) {

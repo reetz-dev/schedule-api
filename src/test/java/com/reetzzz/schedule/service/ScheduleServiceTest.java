@@ -26,7 +26,7 @@ public class ScheduleServiceTest {
     @InjectMocks
     private ScheduleService scheduleService;
 
-    private final String GRADE_API_URL = "http://localhost:3002/api/grades";
+    private final String GRADE_API_URL = "http://localhost:3002/api/grades/weekdays";
 
     @BeforeEach
     void setUp() {
@@ -36,13 +36,14 @@ public class ScheduleServiceTest {
     @Test
     void testGetGradesFromGradeApi() {
         // Simulando a resposta da API (dados falsos)
-        GradeDTO[] mockGrades = {
-                new GradeDTO("Matemática", "13:30 até 14:15", SEGUNDA_FEIRA),
-                new GradeDTO("História", "15:30 até 16:15", QUARTA_FEIRA)
-        };
+//        GradeDTO[] mockGrades = {
+//                new GradeDTO("Matemática", "13:30 até 14:15", SEGUNDA_FEIRA),
+//                new GradeDTO("História", "15:30 até 16:15", QUARTA_FEIRA)
+//        };
+
 
         // Configura o comportamento do Mock do RestTemplate
-        when(restTemplate.getForObject(GRADE_API_URL, GradeDTO[].class)).thenReturn(mockGrades);
+//        when(restTemplate.getForObject(GRADE_API_URL, GradeDTO[].class)).thenReturn(mockGrades);
 
         // Executa o método que estamos testando
         List<GradeDTO> grades = scheduleService.getGradesFromGradeApi();
