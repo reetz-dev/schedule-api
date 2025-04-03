@@ -10,13 +10,13 @@ public record GradeDTO(
         Long id,
         @JsonAlias("name")
         String nome,
-        @JsonAlias("time")
-        String horario,
+        @JsonAlias("horarios")
+        List<String> horarios,
         @JsonAlias("weekdays")
         List<Weekday> weekdays) {
 
     public GradeDTO(GradeDTO dto){
-        this(dto.id(), dto.nome(), dto.horario(), dto.weekdays);
+        this(dto.id(), dto.nome(), dto.horarios(), dto.weekdays);
     }
 
     public String getNome() {
