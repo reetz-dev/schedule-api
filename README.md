@@ -32,7 +32,8 @@ A **Schedule API** é uma API responsável por centralizar e exibir todas as gra
 <a name="Modelagem"></a>
 ## :game_die: Modelagem
 
-![image](https://github.com/user-attachments/assets/52f4c2ea-7918-4c62-b531-574f5a810f67)
+![image](https://github.com/user-attachments/assets/54c23018-e221-4c32-9786-82a4b8eb257e)
+
 
 ---
 
