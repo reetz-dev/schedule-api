@@ -1,4 +1,4 @@
-# Grade API
+# Schedule API
 
 ## :door: Conteúdo
 
@@ -13,7 +13,7 @@
 <a name="Sobre"></a>
 ## :school: Sobre
 
-A **Grade API** faz parte de um sistema maior chamado [schedule-api](https://github.com/reetz-dev/schedule-api), permitindo a gestão de grades horárias escolares. O objetivo é possibilitar a criação, edição e remoção de dias da semana e horários em uma determinada grade.
+A **Schedule API** é uma API responsável por centralizar e exibir todas as grades cadastradas no sistema. Ela realiza a comunicação com a **Grade API**, consumindo seus dados e retornando uma lista completa com as informações de cada grade, incluindo nome, dias da semana e horários de aula.
 
 ---
 
@@ -63,10 +63,10 @@ Grade API estará acessível em `http://localhost:3001`
 
 <details>
   <summary>
-    <strong>:blue_book: GET</strong>
+    <strong>:books: Listar Agendas</strong>
   </summary>
   
-#### Retorna todas as matérias
+#### Buscar todas as matérias existentes
 
 ```http
   GET http://localhost:3001/grades
