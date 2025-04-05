@@ -44,7 +44,7 @@ Para rodar a API localmente:
 
 ```shell
 $ git clone https://github.com/reetz-dev/schedule-api.git
-$ cd grade-api
+$ cd schedule-api
 
 #Caso use o docker
 
