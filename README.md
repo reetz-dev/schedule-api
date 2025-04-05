@@ -13,7 +13,7 @@
 <a name="Sobre"></a>
 ## :school: Sobre
 
-A **Schedule API** é uma API responsável por centralizar e exibir todas as grades cadastradas no sistema. Ela realiza a comunicação com a **Grade API**, consumindo seus dados e retornando uma lista completa com as informações de cada grade, incluindo nome, dias da semana e horários de aula.
+A **Schedule API** é uma API responsável por centralizar e exibir todas as grades cadastradas no sistema. Ela realiza a comunicação com a **Grade API**,  consumindo seus dados e retornando uma lista completa com as informações de cada grade, incluindo nome, dias da semana e horários de aula. Para utilizar esta aplicação, é necessário que a **[Grade API](https://github.com/reetz-dev/grade-api)** esteja em execução.
 
 ---
 
